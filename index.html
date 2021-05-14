@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Playstation</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-------- header -------->
+<header>
+	<div class="container">
+		<div class="navbar">
+			<img src="images/logo.png" class="logo">
+			<nav>
+				<ul id="menuList">
+					<li><a href="#">Game Controllers</a></li>
+					<li><a href="#">VR Accessories</a></li>
+					<li><a href="#">Media Remotes</a></li>
+					<li><a href="#">Others</a></li>
+				</ul>
+			</nav>
+			<img src="images/menu.png" class="menu-icon" onclick="toggleMenu()">
+		</div>
+
+
+
+		<div class="row">
+			<div class="col-1">
+				<h1>PS4 V2<br>Dualshock 4</h1>
+				<h2>Wireless Controller for PlayStation 4</h2>
+				<p>(Compatible/Generic)</p>
+				<h4>$32.50</h4>
+				<button type="button">Buy Now<img src="images/arrow.png"></button>
+			</div>
+			<div class="col-2">
+				<img src="images/controller.png" class="controller">
+				<div class="color-box"></div>
+				<div class="add-btn">
+					<img src="images/add.png">
+					<p><small>Add to Cart</small></p>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<div class="social-link">
+			<img src="images/fb.png">
+			<img src="images/tw.png">
+			<img src="images/ig.png">
+		</div>
+	</div>
+</header>
+
+
+
+
+
+<!-------- toggleMenu -------->
+<script>
+	
+	var menuList = document.getElementById("menuList");
+
+	function toggleMenu(){
+
+		if(menuList.style.maxHeight == "0px"){
+			console.log("show");
+			menuList.style.maxHeight = "180px";
+		}else{
+			console.log("close");
+			menuList.style.maxHeight = 0;
+		}
+	}
+
+	function checkViewPort(){
+		if(window.innerWidth < 700){
+			menuList.style.maxHeight = 0;  // 將清單高度設為0
+		}else{
+			menuList.style.maxHeight = "180px";  // 將清單高度設為0
+		}
+	}
+	window.addEventListener("load", checkViewPort, false);
+	window.addEventListener("resize", checkViewPort, false);
+
+</script>
+
+
+
+
+
+</body>
+</html>
